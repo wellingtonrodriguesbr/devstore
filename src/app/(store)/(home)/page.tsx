@@ -6,9 +6,10 @@ import { Product } from "@/data/types/product";
 
 async function getFeaturedProducts(): Promise<Product[]> {
   const response = await api("/products/featured", {
-    next: {
-      revalidate: 60 * 60, // 01 hour
-    },
+    cache: "no-store",
+    // next: {
+    //   revalidate: 60 * 60, // 01 hour
+    // },
   });
 
   const products = await response.json();
