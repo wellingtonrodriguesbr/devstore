@@ -1,4 +1,4 @@
-import { ButtonAddToCart } from "@/components/button-add-to-cart";
+import { AddToCartButton } from "@/components/add-to-cart-button";
 import { api } from "@/data/api";
 import { Product } from "@/data/types/product";
 import { Metadata } from "next";
@@ -111,7 +111,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
         </div>
 
-        <ButtonAddToCart productId={String(product.id)} />
+        <AddToCartButton productId={String(product.id)} />
       </div>
     </div>
   );

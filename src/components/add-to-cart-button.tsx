@@ -3,11 +3,11 @@
 import { useCart } from "@/context/cart-context";
 import { ComponentProps } from "react";
 
-interface ButtonAddToCartProps extends ComponentProps<"button"> {
+interface AddToCartButtonProps extends ComponentProps<"button"> {
   productId: string;
 }
 
-export function ButtonAddToCart({ productId, ...props }: ButtonAddToCartProps) {
+export function AddToCartButton({ productId, ...props }: AddToCartButtonProps) {
   const { addToCart } = useCart();
   return (
     <button
